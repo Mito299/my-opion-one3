@@ -1,0 +1,71 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#track {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #a99797;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+#cat {
+    position: absolute;
+    bottom: calc(50% - 20px);
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background-image: url('1.png');
+    /* เปลี่ยน URL ให้เป็นไฟล์ PNG */
+    background-size: cover;
+    animation: run 1s steps(4) infinite;
+}
+
+#box {
+    position: absolute;
+    bottom: calc(50% - 30px);
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff00b7;
+    border: 2px solid #000;
+}
+
+#missText {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #ff6f61;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+@keyframes run {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -240px;
+    }
+
+    /* Assuming there are 4 frames of animation */
+}
